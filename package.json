@@ -1,0 +1,28 @@
+{
+  "name": "topic-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolayMiroshnichenko/node_js_lesson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolayMiroshnichenko/node_js_lesson/issues"
+  },
+  "homepage": "https://github.com/NikolayMiroshnichenko/node_js_lesson#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pino-http": "^10.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "pino-pretty": "^13.0.0"
+  }
+}
