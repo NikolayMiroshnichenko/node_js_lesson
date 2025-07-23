@@ -4,6 +4,8 @@ import express from 'express';
 import cors from 'cors';
 // import PinoHttp from 'pino-http';
 import { movies } from './db/movies.js';
+import { readUsers } from './utils/readUsers.js';
+import { writeUsers } from './utils/writeUsers.js';
 
 const app = express();
 
@@ -35,6 +37,8 @@ app.use((req, res, next) => {
     next();
 })
 
+app.use(express.json());
+
 app.get('/', (request, response) => {
     response.send('<h1>Main Page</h1>')
 });
@@ -64,6 +68,15 @@ app.get('/contacts', (request, response) => {
             <p>City: Kyiv</p
         </div>
     `)
+});
+
+app.post('/add-user', async (req, res) => {
+    const body = req.body;
+
+    const userList = await readUsers();
+    const updateUserList = await writeUsers([...userList, body]);
+
+    res.json({ status: 200, data: updateUserList });
 });
 
 // middleware для 404
