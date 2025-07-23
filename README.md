@@ -1,5 +1,1 @@
-# Node.js
-
-
-*   Express
-*   MongoDB
+# project-template   
