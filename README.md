@@ -3,3 +3,5 @@
 
 *   Express
 *   MongoDB
+*   CRUD
+*   Огранізація коду

@@ -5,7 +5,7 @@ const movieSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, { versionKey: false, timestamps: true });
 
 const MovieCollection = model('movie', movieSchema);
 export default MovieCollection;
