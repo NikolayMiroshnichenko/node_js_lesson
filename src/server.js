@@ -26,5 +26,3 @@ export const startServer = () => {
 
     app.listen(PORT, () => console.log(`Start server on ${PORT} port`));
 };
-
-// 35хв вебінар
